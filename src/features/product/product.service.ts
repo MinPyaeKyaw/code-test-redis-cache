@@ -27,8 +27,10 @@ class ProductService {
       // Try to get from cache first
       const cachedProducts = await redisService.get(CACHE_KEY);
       if (cachedProducts) {
+        console.log('hitted product from cache');
         return cachedProducts;
       }
+      console.log('hitted product from memory');
 
       // If not in cache, get from memory and cache it
       await redisService.set(CACHE_KEY, this.products, CACHE_EXPIRY);
@@ -55,6 +57,7 @@ class ProductService {
 
       this.products.push(newProduct);
       await this.invalidateCache();
+      console.log('invalidated cache');
 
       return newProduct;
     } catch (error) {
@@ -80,6 +83,7 @@ class ProductService {
 
       this.products[index] = updatedProduct;
       await this.invalidateCache();
+      console.log('invalidated cache');
 
       return updatedProduct;
     } catch (error) {
@@ -96,6 +100,7 @@ class ProductService {
 
       this.products.splice(index, 1);
       await this.invalidateCache();
+      console.log('invalidated cache');
 
       return true;
     } catch (error) {

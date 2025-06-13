@@ -1,5 +1,8 @@
 import { createClient } from 'redis';
 import { AppError } from '../utils/http';
+import dotenv from 'dotenv';
+// Load environment variables from the .env file
+dotenv.config();
 
 class RedisService {
   private client;
@@ -7,7 +10,7 @@ class RedisService {
 
   private constructor() {
     this.client = createClient({
-      url: process.env.REDIS_URL || 'redis://localhost:6379',
+      url: process.env.REDIS_URL || 'redis://redis:6379',
     });
 
     this.client.on('error', (err) => console.error('Redis Client Error:', err));
