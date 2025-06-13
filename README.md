@@ -37,3 +37,26 @@ The application will be available at `http://localhost:3000`
 - `npm run lint` - Run ESLint to check code quality
 - `npm run lint:fix` - Fix ESLint issues automatically
 - `npm run format` - Format code using Prettier
+
+## API Documentation
+
+The API documentation is available as a Postman collection. You can import the collection to test and explore the available endpoints.
+
+### Postman Collection
+
+1. Download the Postman collection file from the `docs` directory: `docs/postman/redis-cache-api.postman_collection.json`
+2. Import the collection into Postman:
+   - Open Postman
+   - Click on "Import" button
+   - Drag and drop the collection file or click "Upload Files" to select it
+   - The collection will be imported with all available endpoints and example requests
+
+The collection includes:
+- Environment variables setup
+- Example requests for all endpoints
+- Request/response examples
+- Authentication details (if applicable)
+
+### API Base URL
+
+When running locally, the API base URL is: `http://localhost:3000`
