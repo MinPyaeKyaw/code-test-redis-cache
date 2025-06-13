@@ -8,7 +8,7 @@ A Node.js application built with Express.js, TypeScript, and Redis for caching.
 
 ## Project Setup
 
-### Using Docker (Recommended)
+### Using Docker
 
 1. Clone the repository:
 ```bash
@@ -44,18 +44,12 @@ The API documentation is available as a Postman collection. You can import the c
 
 ### Postman Collection
 
-1. Download the Postman collection file from the `docs` directory: `docs/postman/redis-cache-api.postman_collection.json`
+1. Download the Postman collection file from the `root` directory: `./code-test.postman_collection`
 2. Import the collection into Postman:
    - Open Postman
    - Click on "Import" button
    - Drag and drop the collection file or click "Upload Files" to select it
    - The collection will be imported with all available endpoints and example requests
-
-The collection includes:
-- Environment variables setup
-- Example requests for all endpoints
-- Request/response examples
-- Authentication details (if applicable)
 
 ### API Base URL
 
