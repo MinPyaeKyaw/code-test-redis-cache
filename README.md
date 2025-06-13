@@ -5,7 +5,6 @@ A Node.js application built with Express.js, TypeScript, and Redis for caching.
 ## Prerequisites
 
 - Docker and Docker Compose installed on your machine
-- Node.js (if you want to run locally without Docker)
 
 ## Project Setup
 
